@@ -7,7 +7,7 @@ import os
 import random
 
 today = datetime.now()
-# start_date = os.environ['START_DATE']
+start_date = os.environ['START_DATE']
 # city = os.environ['CITY']
 # birthday = os.environ['BIRTHDAY']
 
@@ -41,11 +41,11 @@ def get_birthday():
 
 def get_words():
   words = requests.get("https://api.shadiao.pro/du")
-  print(words.json()['data']['text'])
+  
   if words.status_code != 200:
     return get_words()
   return words.json()['data']['text']
-
+print(get_words())
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
