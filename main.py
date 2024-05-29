@@ -7,7 +7,8 @@ import os
 import random
 
 today = datetime.now()
-start_date = os.environ['START_DATE']
+# start_date = os.environ['START_DATE']
+start_date = "2024-02-07"
 # city = os.environ['CITY']
 # birthday = os.environ['BIRTHDAY']
 
